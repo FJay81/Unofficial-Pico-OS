@@ -1,3 +1,5 @@
+#custom library i made
+
 from random import randint
 import machine
 from time import sleep
@@ -94,5 +96,6 @@ def reboot(lcd):
         lcd.clear()
         lcd.putstr("  Restarting...")
         sleep(0.3)
-        Time += 1 
+        Time += 1
+    lcd.clear()
     machine.reset()
