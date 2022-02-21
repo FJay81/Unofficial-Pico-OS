@@ -10,9 +10,9 @@ I2C_ADDR = i2c.scan()[0]
 lcd = I2cLcd(i2c, I2C_ADDR, 2, 16)
 led = Pin(25, Pin.OUT)
 
-select = Pin(18, Pin.IN, Pin.PULL_DOWN)
-enter = Pin(17, Pin.IN, Pin.PULL_DOWN)
-back = Pin(16, Pin.IN, Pin.PULL_DOWN)
+select = Pin(18, Pin.IN, Pin.PULL_DOWN) #to scroll through menus
+enter = Pin(17, Pin.IN, Pin.PULL_DOWN)#to enter a new menu
+back = Pin(16, Pin.IN, Pin.PULL_DOWN)#goes back to last menu or restart
 
 sleep(2)
 lcd.putstr("   Welcome to\n    Pico-OS!")
@@ -34,7 +34,7 @@ while True:
         print (x)
         choice(x,lcd)
         sleep(0.2)
-        choice(x,lcd)
+        choice(x,lcd)#menu 1
     elif x == 5:
         x = 0
         choice(x, lcd)
@@ -44,7 +44,7 @@ while True:
         sleep(1)
         led.toggle()
         x += 10
-        print (x)
+        print (x)#select the file
         choose(x, lcd)
         
     if back.value():
@@ -71,6 +71,6 @@ while True:
                 lcd.putstr(" Going Back....")
                 sleep(0.3)
                 Time += 1 
-            choice(x,lcd)
+            choice(x,lcd)#back to last menu
         elif x < 10:
-            reboot(lcd)
+            reboot(lcd)#restart
