@@ -14,14 +14,7 @@ select = Pin(18, Pin.IN, Pin.PULL_DOWN) #to scroll through menus
 enter = Pin(17, Pin.IN, Pin.PULL_DOWN)#to enter a new menu
 back = Pin(16, Pin.IN, Pin.PULL_DOWN)#goes back to last menu or restart
 
-sleep(2)
-lcd.putstr("   Welcome to\n    Pico-OS!")
-sleep(5)
-lcd.clear()
-lcd.putstr("   Created By\n     FJay01")
-sleep(3)
-lcd.clear()
-
+boot(x,lcd)
 
 x = -1
 lcd.putstr("Press Button To      Start!")
