@@ -2,7 +2,7 @@ from machine import I2C, Pin
 from time import sleep
 from random import randint
 from pico_i2c_lcd import I2cLcd
-from LOGIC import choice, choose, reboot, previous
+from LOGIC import choice, choose, reboot, boot
 i2c = I2C(0, sda=Pin(0), scl=Pin(1), freq=400000)
 
 I2C_ADDR = i2c.scan()[0]
