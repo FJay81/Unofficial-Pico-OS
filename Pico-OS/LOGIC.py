@@ -78,13 +78,13 @@ def choose(x, lcd):
         lcd.putstr(t)
         
 def boot(x,lcd):
-        sleep(2)
-        lcd.putstr("   Welcome to\n    Pico-OS!")
-        sleep(5)
-        lcd.clear()
-        lcd.putstr("   Created By\n     FJay01")
-        sleep(3)
-        lcd.clear()
+     sleep(2)
+     lcd.putstr("   Welcome to\n    Pico-OS!")
+     sleep(5)
+     lcd.clear()
+     lcd.putstr("   Created By\n     FJay01")
+     sleep(3)
+     lcd.clear()
 
     
 def reboot(lcd):
